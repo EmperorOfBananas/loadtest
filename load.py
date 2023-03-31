@@ -7,7 +7,7 @@ class MicroUser(HttpUser):
 
     @task
     def launch(self):
-        with self.client.post('/auth/login', data=json.dumps({'username': 'Test', 'password': 'TestPass01$'}),
+        with self.client.post('/auth/login', data=json.dumps({'username': 'Test9', 'password': 'TestPass01$'}),
                         headers={},
                         name='Test 0',
                         catch_response=True
