@@ -9,7 +9,7 @@ class MicroUser(HttpUser):
     @task
     def login(self):
         form = LoginForm()
-        form.username.data = 'Test9'
+        form.username.data = 'Test'
         form.username.data = 'TestPass01$'
         response = self.client.post('/auth/login', data=form.data, follow_redirects=True)
         assert response.status_code == 200
